@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Привал — прокат туристического снаряжения в Новосибирске</title>
+  <meta name="description" content="Палатки, рюкзаки, спальники и всё для похода в аренду от 60 ₽ в сутки. Выдача за 15 минут.">
+  <meta name="theme-color" content="#1d3a2f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Привал — на главную">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 13 9l5 9 3-5 8 14z" fill="currentColor"/><circle cx="23" cy="7" r="3" fill="var(--accent)"/></svg>
+      <span>привал</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#how">Как это работает</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#kits">Наборы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="cart-pill" href="#calc">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7z M9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <span>Корзина</span>
+      <b class="cart-pill__count" data-cart-count>0</b>
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text reveal">
+        <p class="eyebrow">Прокат снаряжения · Новосибирск</p>
+        <h1>Снаряжение для&nbsp;похода — в&nbsp;аренду, а&nbsp;не&nbsp;в&nbsp;кладовку</h1>
+        <p class="lead">Палатки, рюкзаки, спальники и&nbsp;горелки, проверенные после каждого выезда. Соберите комплект онлайн и&nbsp;заберите его за&nbsp;15&nbsp;минут.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#catalog">Собрать комплект</a>
+          <a class="btn btn--ghost" href="#kits">Готовые наборы</a>
+        </div>
+        <dl class="stats">
+          <div><dt>от 60 ₽</dt><dd>в&nbsp;сутки за&nbsp;вещь</dd></div>
+          <div><dt>−20%</dt><dd>при аренде от&nbsp;7&nbsp;дней</dd></div>
+          <div><dt>15 мин</dt><dd>на&nbsp;выдачу заказа</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__art reveal" aria-hidden="true">
+        <svg viewBox="0 0 520 560" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f6d8b8"/>
+              <stop offset="1" stop-color="#f3ede2"/>
+            </linearGradient>
+          </defs>
+          <rect width="520" height="560" fill="url(#sky)"/>
+          <circle class="sun" cx="370" cy="170" r="62" fill="#e8673a"/>
+          <path d="M0 330 110 190l70 80 90-140 120 170 60-60 70 90v270H0z" fill="#9db59a"/>
+          <path d="M270 130 300 180 285 175 270 195 258 172 245 178z" fill="#f3ede2" opacity=".9"/>
+          <path d="M0 400 90 300l80 70 110-120 110 110 60-40 70 70v170H0z" fill="#5f8467"/>
+          <path d="M0 470 120 390l100 50 120-80 180 120v80H0z" fill="#2f5643"/>
+          <g fill="#1d3a2f">
+            <path d="M60 470 75 420 90 470z"/><path d="M85 480 102 425 119 480z"/>
+            <path d="M430 465 446 412 462 465z"/><path d="M455 478 470 430 485 478z"/>
+          </g>
+          <!-- палатка -->
+          <g transform="translate(200 440)">
+            <path d="M0 70 70 0l70 70z" fill="#e8673a"/>
+            <path d="M70 0 92 70H48z" fill="#b8481f"/>
+            <path d="M-20 70h180" stroke="#1d3a2f" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <!-- костёр -->
+          <g transform="translate(380 492)">
+            <path class="flame" d="M14 0c10 10 14 18 8 24H6C0 18 4 10 14 0z" fill="#f2a541"/>
+            <path d="M0 26l28-6M0 20l28 6" stroke="#6b4a32" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Сегодня свободно 38&nbsp;палаток
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Как это работает</p>
+        <h2>Три шага до&nbsp;выезда</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">01</span>
+          <h3>Соберите комплект</h3>
+          <p>Добавьте вещи из&nbsp;каталога или возьмите готовый набор. Калькулятор сразу посчитает цену со&nbsp;скидкой.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">02</span>
+          <h3>Оставьте заявку</h3>
+          <p>Перезвоним за&nbsp;10&nbsp;минут, подтвердим наличие и&nbsp;подскажем, что ещё пригодится на&nbsp;маршруте.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">03</span>
+          <h3>Заберите и&nbsp;верните</h3>
+          <p>Выдача на&nbsp;Красном проспекте. Вернуть можно грязным&nbsp;— чистку и&nbsp;сушку мы&nbsp;берём на&nbsp;себя.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Catalog + calculator -->
+  <section class="section section--tint" id="catalog">
+    <div class="container">
+      <div class="section__head section__head--row reveal">
+        <div>
+          <p class="eyebrow">Каталог</p>
+          <h2>Всё для&nbsp;похода</h2>
+        </div>
+        <div class="chips" role="tablist" aria-label="Категории" data-filters></div>
+      </div>
+
+      <div class="shop">
+        <div class="grid" data-grid aria-live="polite"></div>
+
+        <aside class="calc" id="calc" aria-labelledby="calc-title">
+          <h3 id="calc-title">Ваш комплект</h3>
+          <ul class="calc__list" data-cart-list></ul>
+          <p class="calc__empty" data-cart-empty>Пока пусто. Добавьте вещи из&nbsp;каталога или готовый набор.</p>
+
+          <div class="calc__days">
+            <label for="days">Срок аренды</label>
+            <output for="days" data-days-out>3 дня</output>
+          </div>
+          <input type="range" id="days" min="1" max="14" value="3" data-days>
+          <p class="calc__hint" data-discount-hint></p>
+
+          <dl class="calc__sum">
+            <div><dt>В сутки</dt><dd data-per-day>0 ₽</dd></div>
+            <div><dt>Скидка</dt><dd data-discount>—</dd></div>
+            <div class="calc__total"><dt>Итого</dt><dd data-total>0 ₽</dd></div>
+          </dl>
+          <a class="btn btn--accent btn--block" href="#order" data-to-order>Оформить заявку</a>
+          <p class="calc__note">Залог 3&nbsp;000&nbsp;₽ возвращаем при сдаче.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kits -->
+  <section class="section" id="kits">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Готовые наборы</p>
+        <h2>Не&nbsp;знаете, что брать? Мы&nbsp;уже собрали</h2>
+      </div>
+      <div class="kits" data-kits></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--tint" id="faq">
+    <div class="container faq">
+      <div class="section__head reveal">
+        <p class="eyebrow">Вопросы</p>
+        <h2>Частые вопросы</h2>
+        <p class="muted">Не&nbsp;нашли ответ? Напишите нам в&nbsp;Telegram&nbsp;— отвечаем с&nbsp;9 до&nbsp;21.</p>
+      </div>
+      <div class="faq__list">
+        <details class="reveal">
+          <summary>Что будет, если я&nbsp;что-то сломаю?</summary>
+          <p>Мелкий износ&nbsp;— сломанную молнию, погнутый колышек&nbsp;— не&nbsp;считаем. Если вещь не&nbsp;подлежит ремонту, удержим её&nbsp;остаточную стоимость из&nbsp;залога.</p>
+        </details>
+        <details class="reveal">
+          <summary>Можно продлить аренду в&nbsp;дороге?</summary>
+          <p>Да, напишите нам до&nbsp;окончания срока. Скидка пересчитается автоматически на&nbsp;весь период.</p>
+        </details>
+        <details class="reveal">
+          <summary>Снаряжение чистое?</summary>
+          <p>После каждого возврата палатки сушим и&nbsp;проверяем, спальники стираем, посуду моем и&nbsp;обрабатываем.</p>
+        </details>
+        <details class="reveal">
+          <summary>Какие документы нужны?</summary>
+          <p>Только паспорт и&nbsp;залог. Фотографировать паспорт не&nbsp;будем&nbsp;— просто сверим данные в&nbsp;договоре.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order -->
+  <section class="section" id="order">
+    <div class="container">
+      <div class="order reveal">
+        <div class="order__intro">
+          <p class="eyebrow eyebrow--light">Заявка</p>
+          <h2>Забронируйте комплект</h2>
+          <p>Перезвоним в&nbsp;течение 10&nbsp;минут и&nbsp;отложим вещи на&nbsp;ваши даты.</p>
+          <div class="order__summary" data-order-summary></div>
+        </div>
+
+        <form class="form" novalidate data-form>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" autocomplete="given-name" placeholder="Как к вам обращаться" required>
+            <span class="field__error">Укажите имя</span>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required data-phone>
+            <span class="field__error">Введите номер полностью</span>
+          </div>
+          <div class="field">
+            <label for="date">Дата выдачи</label>
+            <input id="date" name="date" type="date" required data-date>
+            <span class="field__error">Выберите дату не&nbsp;раньше сегодняшней</span>
+          </div>
+          <div class="field">
+            <label for="comment">Комментарий <span class="muted">— необязательно</span></label>
+            <textarea id="comment" name="comment" rows="3" placeholder="Например: идём на Алтай вчетвером"></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="agree" required>
+            <span>Согласен на&nbsp;обработку персональных данных</span>
+          </label>
+          <button class="btn btn--accent btn--block" type="submit">Отправить заявку</button>
+        </form>
+
+        <div class="success" hidden data-success>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="3"/><path d="m14 25 7 7 13-14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Заявка <span data-order-id></span> принята</h3>
+          <p data-success-text></p>
+          <button class="btn btn--ghost-light" type="button" data-reset>Оформить ещё одну</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="logo logo--light" href="#top">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 13 9l5 9 3-5 8 14z" fill="currentColor"/><circle cx="23" cy="7" r="3" fill="var(--accent)"/></svg>
+      <span>привал</span>
+    </a>
+    <p>Новосибирск, Красный проспект · ежедневно 9:00–21:00</p>
+    <p class="footer__demo">Демо-проект для портфолио. «Привал» — вымышленный бренд, заявки никуда не&nbsp;отправляются.</p>
+  </div>
+</footer>
+
+<a class="mobile-cart" href="#calc" data-mobile-cart hidden>
+  <span>Комплект: <b data-cart-count>0</b></span>
+  <b data-mobile-total>0 ₽</b>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
